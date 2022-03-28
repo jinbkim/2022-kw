@@ -26,7 +26,7 @@
 ## DDL grammer
 ### create table instructor(X)
 - X 형식을 가지는 새로운 테이블 instructor 생성
-### insert to instructor values(X)
+### insert into instructor values(X)
 - instructor 테이블에 X 튜플을 삽입
 ### delete from instructor
 - instructor 테이블의 모든 튜플 삭제
@@ -115,11 +115,30 @@
 - group by 된 필드에 조건을 줌
 
 #
-## Subquery Operator used For Where Clause
-- in A : A를 포함하면 참
-- not in A : A를 포함하지 않으면 참
-- some A : A중 하나만 만족하면 참
-- all A : A를 모두 만족해야 참
-- exist : 공집합이 아니면 참
-- not exist : 공집합이면 참
-- unique : 중복되는 값이 없으면 참
+## Subquery
+- 하나의 SQL 문에 포함되어 또 다른 SQL 문
+- 비교연산자의 오른쪽에 기술해야 하고 반드시 괄호 안에 넣어햐 함
+- 메인 쿼리가 실행되기 이전에 한번만 실행됨
+- 서브쿼리에서는 ORDER BY를 사용하지 못함
+### 단일 행 서브쿼리
+- 서브쿼리가 단일 행 비교 연산자(=, <, <=, >, >=, <>)와 함께 사용할 때는 서브쿼리의 결과 건수가 반드시 1건 이하여야 함
+- 그룹 함수를 사용하는 경우 결과값이 1건이기 때문에 단일 행 서브쿼리가 사용 가능
+### 다중 행 서브쿼리
+- 서브의 결과가 2건 이상 반활될 수 있다면 반드시 다중 행 비교 연산자와 함께 사용해야 함
+- IN A : A를 포함하면 참
+- NOT IN A : A를 포함하지 않으면 참
+- SOME A : A중 하나만 만족하면 참
+- ALL A : A를 모두 만족해야 참
+- EXISTS : 공집합이 아니면 참
+- NOT EXISTS : 공집합이면 참
+- UNIQUE : 중복되는 값이 없으면 참
+### 연관 서브쿼리
+- 서브쿼리 내에 메인쿼리 컬럼이 사용된 서브쿼리
+### Subqueries in the SELECT Clause (Scalar Subqueries)
+- 서브쿼리를 끝마친 값하나를 메인쿼리에서 SELECT하기 때문에, 서브쿼리의 결과는 반드시 단일 행이나, 집계 함수를 거친 단일 값으로 반환되어야 함
+### Subqueries in the From Clause (Inline Views Subqueries)
+- 서브쿼리를 끝마친 테이블 하나를 메인쿼리의 FROM에서 테이블로 잡기 때문에, 서브쿼리의 결과는 반드시 하나의 테이블로 반환되어야 함
+### Subqueries in the Where Clause (Nested Subqueries)
+- 서브쿼리를 끝마친 값들을 메인쿼리의 조건절을 통해 비교등을 하기 때문에, 단일행과 복수행 둘다 반환이 가능
+### With Clause
+- 이름을 가진 서브쿼리를 정의한 후 사용하는 구문
