@@ -70,7 +70,7 @@
 - ∀xP(x) <-> ￢∃x￢P(x)
 - ∃xP(x) <-> ￢∀x￢P(x)
 - ∀x∀yP(x,y) <-> ∀y∀xP(x,y)
--  x∃yP(x,y) <-> ∃y∃xP(x,y)
+- ∃x∃yP(x,y) <-> ∃y∃xP(x,y)
 - ∀x(P(x) ∧ Q(x)) <-> (∀xP(x)) ∧ (∀xQ(x))
 - ∃x(P(x) ∨ Q(x)) <-> (∃xP(x)) ∨ (∃xQ(x))
 
