@@ -1,8 +1,8 @@
-## Relation Schema and Instance
+### Relation Schema and Instance
 - attributes : columns of table (A1, A2, ..., An)
 - tuple : rows of table
 - schema : R = (A1, A2, ..., An)
-- instance : r(R)
+- instance : real data of schema (rows of table)
 
 #
 ## Attributes
