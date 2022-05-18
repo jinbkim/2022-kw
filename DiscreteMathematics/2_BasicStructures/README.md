@@ -71,7 +71,3 @@
 ### Geometric Series
 - Σ(i: 0~n) ar^i = a*(r^(n+1)-1)/(r-1)
     * if r=1, Σ(i: 0~k) ar^i = a(n+1)
-
-#
-## Cardinality of Sets
-### Infinite Cardinalities
