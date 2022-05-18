@@ -75,3 +75,14 @@
 - One To One : 두 엔티티 중 아무거나 하나 엔티티의 PK 선택
 - One To Many, Many To One : Many 쪽의 엔티티의 PK 선택
 - Many To Many : 두 엔티티의 PK 선택
+
+#
+## Weak Entity Sets
+- 자신의 Key Attribute가 없는 Entity Type
+- ER 다이어그램에서 두 개의 네모로 표현됨
+### Partial key
+- 약한 개체의 키로 단독으로 존재할수 없으며 자신을 소유하고 있는 엔티티의 키와 함께 표현되어야 함
+- ER 다이어그램에서 점선으로 된 밑줄으로 표현됨
+### Identifying Relationship Type
+- 엔티티 타입이 약한 개체와 관계를 맞을 때는 식별 관계성 타입으로 표현함
+- ER 다이어그램에서 두 개의 마름모로 표현함
